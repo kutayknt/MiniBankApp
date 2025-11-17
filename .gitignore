@@ -1,0 +1,7 @@
+﻿# Visual Studio temporary files
+bin/
+obj/
+.vs/
+
+# Local settings / secrets
+appsettings.json
