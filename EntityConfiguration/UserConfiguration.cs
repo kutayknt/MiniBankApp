@@ -17,8 +17,18 @@ namespace MiniBankApp.EntityConfiguration
             builder.HasMany(u => u.BankAccounts)
                 .WithOne(ba => ba.User).HasForeignKey(ba => ba.UserId);
             //Property Yapılandırmaları
-            builder.Property(u => u.Name);
-                
+            builder.Property(u => u.Name)
+                .HasMaxLength(20)
+                .IsRequired();
+            builder.Property(u => u.Surname)
+                .HasMaxLength(20)
+                .IsRequired();
+            builder.HasIndex(u => u.Email)
+                .IsUnique();
+            builder.Property(u => u.Email)
+                .IsRequired();
+            builder.Property(u => u.CreatedDate)
+                .HasDefaultValueSql("GETDATE()");
         }
     }
 }

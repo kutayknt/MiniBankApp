@@ -1,2 +1,2 @@
 # MiniBankApp
-Learnin Project : MiniBank Console App using C#, OOP and EF Core
+Learning Project : MiniBank Console App using C#, OOP and EF Core
